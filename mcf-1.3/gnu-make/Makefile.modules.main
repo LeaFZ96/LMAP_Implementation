@@ -1,0 +1,7 @@
+# LAST EDIT: Tue Feb 17 10:53:09 2004 by Andreas Loebel (opt0.zib.de) 
+# $Id: Makefile.modules.main,v 1.1 2004/02/17 13:59:20 bzfloebe Exp $
+
+VPATH = $(SRCDIR)
+
+
+MAIN_MOD = main parmanag

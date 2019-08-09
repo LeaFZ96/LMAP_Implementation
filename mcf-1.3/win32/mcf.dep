@@ -1,0 +1,40 @@
+# Microsoft Developer Studio erstellte Abhängigkeitsdatei, einbezogen von mcf.mak
+
+..\Src\Main.c : \
+	"..\src\dbea.h"\
+	"..\src\dbla.h"\
+	"..\src\dbladef.h"\
+	"..\src\dsimplex.h"\
+	"..\src\dstart.h"\
+	"..\src\dw.h"\
+	"..\src\mcf.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\mcfutil.h"\
+	"..\src\parmanag.h"\
+	"..\src\pbea.h"\
+	"..\src\pbeadef.h"\
+	"..\src\pbla.h"\
+	"..\src\pflowup.h"\
+	"..\src\psimplex.h"\
+	"..\src\pstart.h"\
+	"..\src\treeup.h"\
+	
+
+..\Src\Parmanag.c : \
+	"..\src\dbea.h"\
+	"..\src\dbla.h"\
+	"..\src\dbladef.h"\
+	"..\src\dsimplex.h"\
+	"..\src\dstart.h"\
+	"..\src\dw.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\mcfutil.h"\
+	"..\src\parmanag.h"\
+	"..\src\pbea.h"\
+	"..\src\pbeadef.h"\
+	"..\src\pbla.h"\
+	"..\src\pflowup.h"\
+	"..\src\psimplex.h"\
+	"..\src\pstart.h"\
+	"..\src\treeup.h"\
+	

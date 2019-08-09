@@ -1,0 +1,21 @@
+# LAST EDIT: Tue Feb 17 14:32:27 2004 by Andreas Loebel (opt0.zib.de) 
+# $Id: Makefile.libmcf,v 1.2 2004/02/17 13:59:19 bzfloebe Exp $
+
+ARCH = Linux
+include ../../Makefile.arch.${ARCH}
+include ../../Makefile.modules.libmcf
+include ../../Makefile.include
+include ../../Makefile.cppflags
+include ../../Makefile.libs
+
+
+lib: libmcf.a
+
+
+libmcf.a: $(LIBMCF_MOD:%=%.d) $(LIBMCF_MOD:%=%.o)
+	$(AR) cr $@ $(LIBMCF_MOD:%=%.o)
+	ranlib $@
+
+
+include ../../Makefile.rules
+include $(LIBMCF_MOD:%=%.d)

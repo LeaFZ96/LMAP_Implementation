@@ -1,0 +1,151 @@
+# Microsoft Developer Studio erstellte Abhängigkeitsdatei, einbezogen von mcflib.mak
+
+..\Src\Dbea.c : \
+	"..\src\dbea.h"\
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbeadef.h"\
+	
+
+..\Src\Dbla.c : \
+	"..\src\dbla.h"\
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbeadef.h"\
+	
+
+..\Src\Dblampp1.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbeadef.h"\
+	
+
+..\Src\Dblampp2.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbeadef.h"\
+	
+
+..\Src\Dsimplex.c : \
+	"..\src\dbea.h"\
+	"..\src\dbladef.h"\
+	"..\src\dsimplex.h"\
+	"..\src\dw.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\mcfutil.h"\
+	"..\src\pbeadef.h"\
+	"..\src\treeup.h"\
+	
+
+..\Src\Dstart.c : \
+	"..\src\dbladef.h"\
+	"..\src\dstart.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\mcfutil.h"\
+	"..\src\pbea.h"\
+	"..\src\pbeadef.h"\
+	"..\src\pbla.h"\
+	"..\src\pflowup.h"\
+	"..\src\psimplex.h"\
+	"..\src\treeup.h"\
+	
+
+..\Src\Dw.c : \
+	"..\src\dbladef.h"\
+	"..\src\dw.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbeadef.h"\
+	
+
+..\Src\Mcfutil.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\mcfutil.h"\
+	"..\src\pbeadef.h"\
+	
+
+..\Src\Output.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\output.h"\
+	"..\src\pbeadef.h"\
+	
+
+..\Src\Pbea.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbea.h"\
+	"..\src\pbeadef.h"\
+	
+
+..\Src\Pbeampp1.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbeadef.h"\
+	
+
+..\Src\Pbeampp2.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbeadef.h"\
+	
+
+..\Src\Pbeampp3.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbeadef.h"\
+	
+
+..\Src\Pbeampp4.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbeadef.h"\
+	
+
+..\Src\Pbla.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbeadef.h"\
+	"..\src\pbla.h"\
+	
+
+..\Src\Pflowup.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbeadef.h"\
+	"..\src\pflowup.h"\
+	
+
+..\Src\Psimplex.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\mcfutil.h"\
+	"..\src\pbea.h"\
+	"..\src\pbeadef.h"\
+	"..\src\pbla.h"\
+	"..\src\pflowup.h"\
+	"..\src\psimplex.h"\
+	"..\src\treeup.h"\
+	
+
+..\Src\Pstart.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbeadef.h"\
+	"..\src\pstart.h"\
+	
+
+..\Src\Readmin.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\mcfutil.h"\
+	"..\src\pbeadef.h"\
+	"..\src\readmin.h"\
+	
+
+..\Src\Treeup.c : \
+	"..\src\dbladef.h"\
+	"..\src\mcfdefs.h"\
+	"..\src\pbeadef.h"\
+	"..\src\treeup.h"\
+	

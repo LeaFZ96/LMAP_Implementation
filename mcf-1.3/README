@@ -1,0 +1,56 @@
+
+MCF 1.3 -- A Network simplex implementation
+
+Andreas Löbel
+Zuse Institute Berlin (ZIB)
+Takustr. 7, 14195 Berlin, Germany
+
+Copyright (c) 1997-2000   ZIB Berlin.
+Copyright (c) 2000-2004   ZIB Berlin & Andreas Löbel.
+All Rights Reserved.
+
+
+1.  What's new
+
+	see README.changes
+
+
+2.  Installation & Use
+
+	see README.msvc++ or README.gnu
+
+
+4.  Documentation
+
+    A documentation of the data structure and the interface of mcf.a is provided
+    in dvi, postscript (ps), and the Adobe Portable Document Format (pdf). All
+    dokuments have been created by the old DOC++ package for version 1.2. I have
+    not updated it for 1.3 yet. Maybe in the future, I will use doxygen to
+    generate a new documentation, but currently I have not enough free time for
+    this work. 
+
+	The program "mcf" provides help information by typing "help" or "?".
+
+
+5.  Bug report
+
+    If you have serious problems using mcf or if you have detected some bug,
+    please send an email to loebel@zib.de including an short description of your
+    problem as well as the minimum-cost flow instance for which the bug occurs.
+
+
+6.  Publications
+
+    Any publication reporting on results obtained using mcf must include an
+    acknowledgement as well as a reference like the following: Loebel,
+    A. (2004). MCF Version 1.3 - A network simplex implementation.  Available
+    for academic use free of charge via WWW at www.zib.de.
+
+
+
+Berlin, February 17, 2004
+
+Andreas Loebel
+
+
+

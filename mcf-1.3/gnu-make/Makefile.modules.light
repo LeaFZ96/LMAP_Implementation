@@ -1,0 +1,7 @@
+# LAST EDIT: Tue Feb 17 10:53:36 2004 by Andreas Loebel (opt0.zib.de) 
+# $Id: Makefile.modules.light,v 1.1 2004/02/17 13:59:20 bzfloebe Exp $
+
+VPATH = $(SRCDIR)
+
+
+LIGHT_MOD = mcflight

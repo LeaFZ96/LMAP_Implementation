@@ -1,0 +1,23 @@
+# LAST EDIT: Tue Feb 17 10:50:18 2004 by Andreas Loebel (opt0.zib.de) 
+# $Id: Makefile.rules,v 1.3 2004/02/17 13:59:20 bzfloebe Exp $
+
+
+clean:
+	rm -f *.o *.lint mcf mcflight lib*.a
+
+#reset:
+
+
+%.d: %.c
+	$(SHELL) -ec '$(GCC) -MM $(CPPFLAGS) $< \
+		| sed '\''s/\($*\)\.o[ :]*/\1.o $@ : /g'\'' > $@; \
+		[ -s $@ ] || rm -f $@'
+
+
+lintclean:
+	rm -rf *.lnt
+
+lint: lintclean $(DS_MOD:%=%.lnt)
+
+%.lnt: %.c
+	lintgcc -u $(CPPFLAGS) -os\($@\) ds.lnt $(@:%.lnt=%.c.lnt) $(@:%.lnt=%.c)

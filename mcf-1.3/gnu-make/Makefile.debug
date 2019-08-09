@@ -1,0 +1,9 @@
+# LAST EDIT: Tue Feb 17 14:27:37 2004 by Andreas Loebel (opt0.zib.de) 
+# $Id: Makefile.debug,v 1.1 2004/02/17 13:59:19 bzfloebe Exp $
+
+
+LEVEL = debug
+WARN = warn
+
+
+include Makefile.master

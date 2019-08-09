@@ -1,0 +1,37 @@
+
+MCF 1.3 -- A Network simplex implementation
+
+Andreas Löbel
+Zuse Institute Berlin (ZIB)
+Takustr. 7, 14195 Berlin, Germany
+
+Copyright (c) 1997-2000   ZIB Berlin.
+Copyright (c) 2000-2004   ZIB Berlin & Andreas Löbel.
+All Rights Reserved.
+
+
+Version 1.3:
+
+a) New directory structure.
+b) Bug fix in dual solver, file dbla.c: removed possible arithmetic overflow, 
+   which may lead to incorrect results.
+c) MCF documentation has not been updated since 1.2 and will be eventually 
+   upgraded using doxygen.
+
+
+Version 1.2: 
+
+a) Minor bug fix in main.c.
+b) Correct handling of time.h, sys/time.h, and sys/times.h. 
+c) Better dependencies handling on unix/linux systems (requires GNU make).
+d) Removed prototyp.h and made function prototyping as standard.
+e) Added prefix MCF_ to all names and identifiers.
+f) Windows support for a Microsoft Visual C++ 6.0 environment.
+
+
+Version 1.1: 
+
+a) MCF is now stable for 64-bit architectures.
+b) The objective value is now be computed correctly by mcflight.
+c) Fixed arc values are handled correctly.
+d) Windows support for a Microsoft Visual C++ 5.0 environment

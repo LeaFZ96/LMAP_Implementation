@@ -1,0 +1,21 @@
+# LAST EDIT: Tue Feb 17 14:33:06 2004 by Andreas Loebel (opt0.zib.de) 
+# $Id: Makefile.main,v 1.1 2004/02/17 13:59:19 bzfloebe Exp $
+
+ARCH = Linux
+include ../../Makefile.arch.${ARCH}
+include ../../Makefile.modules.main
+include ../../Makefile.include
+include ../../Makefile.cppflags
+include ../../Makefile.libs
+
+
+lib: main.a
+
+
+main.a: $(MAIN_MOD:%=%.d) $(MAIN_MOD:%=%.o)
+	$(AR) cr $@ $(MAIN_MOD:%=%.o)
+	ranlib $@
+
+
+include ../../Makefile.rules
+include $(MAIN_MOD:%=%.d)
