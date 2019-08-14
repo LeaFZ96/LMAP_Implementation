@@ -1,0 +1,5 @@
+.vscode
+virenv
+__pycache__
+data
+lbm*
