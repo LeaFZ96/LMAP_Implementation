@@ -1,8 +1,0 @@
-# Microsoft Developer Studio erstellte Abhängigkeitsdatei, einbezogen von mcflight.mak
-
-..\Src\Mcflight.c : \
-	"..\src\dbladef.h"\
-	"..\src\mcf.h"\
-	"..\src\mcfdefs.h"\
-	"..\src\pbeadef.h"\
-	

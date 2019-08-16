@@ -1,5 +1,0 @@
-# LAST EDIT: Tue Feb 17 14:29:16 2004 by Andreas Loebel (opt0.zib.de) 
-# $Id: Makefile.include,v 1.2 2004/02/17 13:59:19 bzfloebe Exp $
-
-
-INCL  = -I../src

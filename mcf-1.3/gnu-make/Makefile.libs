@@ -1,5 +1,0 @@
-# LAST EDIT: Tue Jun  3 11:17:53 2003 by Andreas Loebel (opt0.zib.de) 
-# $Id: Makefile.libs,v 1.1.1.1 2003/06/03 12:06:54 bzfloebe Exp $
-
-
-LIBS = -lm #-lsupc++
