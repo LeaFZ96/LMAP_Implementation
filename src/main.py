@@ -13,7 +13,7 @@ out_size = 90856
 epoch_num = 50
 lr = 0.001
 
-path = 'data/delta_after.out'
+path = 'data/delta_cut.out'
 
 
 def main():

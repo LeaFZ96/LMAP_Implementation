@@ -1,4 +1,5 @@
-inputfile = open('data/delta_after.out')
+inputfile = open('data/deltas.out')
+outputfile = open('data/statics.out', 'w')
 
 line = inputfile.readline()
 
@@ -32,7 +33,6 @@ print('Start writing')
 delta_sorted = sorted(delta_dict.items(), key=lambda item:item[1], reverse=True)
 pc_sorted = sorted(pc_dict.items(), key=lambda item:item[1], reverse=True)
 
-outputfile = open('data/statics.out', 'w')
 
 outputfile.write('pc: (' + str(len(pc_sorted)) + ')\n')
 for i in pc_sorted:

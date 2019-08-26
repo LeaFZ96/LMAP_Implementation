@@ -26,7 +26,7 @@ def train(train_loader, model, criterion, optimizer, epoch, delta_num):
         loss.backward()
         optimizer.step()
 
-        if i % 10 == 0:
+        if i % 300 == 0:
             prec1, prec10 = accuracy(output, target, topk=(1, 10))
 
             losses.update(to_python_float(loss), 1)
