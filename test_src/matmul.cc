@@ -22,7 +22,7 @@ int main() {
         for (int j = 0; j < LEN; j++) {
             C[i * LEN + j] = 0;
             for (int k = 0; k < LEN; k++) {
-                C[i * LEN + j] += A[i * LEN + k] * B[k * LEN + j];
+                C[i * LEN + j] += A[i * LEN + k] * B[(k * LEN + j) * 2];
             }
         }
     }

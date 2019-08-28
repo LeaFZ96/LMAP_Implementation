@@ -11,8 +11,8 @@ class LSTM(nn.Module):
         self.pc_embeddings = nn.Embedding(pc_size, embedding_dim)
         self.delta_embeddings = nn.Embedding(delta_size, embedding_dim)
 
-        self.lstm0 = nn.LSTM(embedding_dim, embedding_dim)
-        self.lstm1 = nn.LSTM(embedding_dim, hidden_dim)
+        self.lstm0 = nn.LSTM(embedding_dim * 2, embedding_dim * 2)
+        self.lstm1 = nn.LSTM(embedding_dim * 2, hidden_dim)
 
         self.hidden2tag = nn.Linear(hidden_dim, out_size)
 
@@ -22,7 +22,7 @@ class LSTM(nn.Module):
 
         embeds = pc_embeds
         if self.training:
-            embeds = torch.cat([delta_embeds, embeds])
+            embeds = torch.cat([delta_embeds, embeds], 1)
 
         output, _ = self.lstm0(embeds.view(len(embeds), 1, -1))
         output, _ = self.lstm1(output)

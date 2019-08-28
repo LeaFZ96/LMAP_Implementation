@@ -1,4 +1,4 @@
-dict_file = open('data/mid.out')
+dict_file = open('data/num.out')
 
 delta_dict = []
 for line in dict_file:

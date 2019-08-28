@@ -27,6 +27,9 @@ class Dict(object):
             self.dict[val] = self.size - 1
             return self.size - 1
 
+    def get_len(self):
+        return len(self.dict)
+
 def accuracy(output, target, topk=(1,)):
     """Computes the precision@k for the specified values of k"""
     maxk = max(topk)
