@@ -1,30 +1,41 @@
 import numpy as np
-import matplotlib.pyplot as plt
-from sklearn import manifold, datasets
+from MulticoreTSNE import MulticoreTSNE as TSNE
 
-digits = datasets.load_digits(n_class=6)
-X, y = digits.data, digits.target
+def tsne_f():
 
-tsne = manifold.TSNE(n_components=2, init='pca')
-X_tsne = tsne.fit_transform(X)
+    inputfile = open('data/select_2_stride.out')
 
-print("Org data dimension is {}. Embedded data dimension is {}".format(X.shape[-1], X_tsne.shape[-1]))
-'''
-x_min, x_max = X_tsne.min(0), X_tsne.max(0)
-X_norm = (X_tsne - x_min) / (x_max - x_min)  # 归一化
-'''
+    print('Strat reading data')
+    X = []
+    for line in inputfile:
+        line_list = line.split()
+        temp_list = []
+        for i in line_list:
+            temp_list.append(float(i))
+        X.append(temp_list)
+    print('Finish reading data')
 
-X_norm = X_tsne
-plt.figure(figsize=(8, 8))
+    X = np.array(X)
+    
+    print('Start fitting')
+    tsne = TSNE(n_jobs=20)
+    X_tsne = tsne.fit_transform(X)
+    
+    print("Org data dimension is {}. Embedded data dimension is {}".format(X.shape[-1], X_tsne.shape[-1]))
 
-plt.scatter(X_norm[:, 0], X_norm[:, 1])
+    x_min, x_max = X_tsne.min(0), X_tsne.max(0)
+    X_norm = (X_tsne - x_min) / (x_max - x_min)
 
-'''
-for i in range(X_norm.shape[0]):
-    plt.text(X_norm[i, 0], X_norm[i, 1], str(y[i]), color=plt.cm.Set1(y[i]), 
-             fontdict={'weight': 'bold', 'size': 9})
-'''
+    print('Start writting')
+    outputfile = open('data/tsne_2_stride.out', 'w')
 
-plt.xticks()
-plt.yticks()
-plt.show()
+    j = 0
+    for i in X_norm:
+        outputfile.write('{} {}\n'.format(i[0], i[1]))
+        if j % 300 == 0:
+            print('[{}/{}]'.format(j, len(X_norm)))
+        j += 1
+
+
+if __name__ == '__main__':
+    tsne_f()

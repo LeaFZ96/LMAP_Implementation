@@ -10,7 +10,7 @@ hidden_dim = 16
 delta_size = 90856
 pc_size = 250
 out_size = 90856
-epoch_num = 1
+epoch_num = 2
 lr = 0.001
 
 path = 'data/delta_cut.out'
@@ -52,8 +52,8 @@ def output_embedding(model, train_loader):
 
         embeds = torch.cat([delta_embeds, pc_embeds], 1)
 
-        for i in embeds.tolist():
-            for j in i:
+        for k in embeds.tolist():
+            for j in k:
                 outputfile.write('%s ' % j)
             outputfile.write('\n')
 
