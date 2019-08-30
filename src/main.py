@@ -4,13 +4,11 @@ from model import LSTM
 from dataset import CacheDataset
 from train import train
 
-batch_size = 64
+batch_size = 65
+window_size = 1
 embedding_dim = 128
 hidden_dim = 16
-delta_size = 90856
-pc_size = 250
-out_size = 90856
-epoch_num = 2
+epoch_num = 1
 lr = 0.001
 
 path = 'data/delta_cut.out'
@@ -18,8 +16,8 @@ path = 'data/delta_cut.out'
 def main():
 
     print('Start reading data')
-    train_dataset = CacheDataset(path)
-    train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size)
+    train_dataset = CacheDataset(path, window_size)
+    train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     print('Finish reading data')
 
     delta_size = train_dataset.delta_dict.get_len()
@@ -36,10 +34,10 @@ def main():
 
         train(train_loader, model, criterion, optimizer, epoch, delta_size)
 
-    output_embedding(model, train_loader)
+    output_embedding(model, train_loader, train_dataset)
 
     
-def output_embedding(model, train_loader):
+def output_embedding(model, train_loader, train_dataset):
     outputfile = open('data/embedding.out', 'w')
     for i, (pc, delta) in enumerate(train_loader):
         pc = pc.cuda()
@@ -52,8 +50,9 @@ def output_embedding(model, train_loader):
 
         embeds = torch.cat([delta_embeds, pc_embeds], 1)
 
-        for k in embeds.tolist():
-            for j in k:
+        for m, k in enumerate(embeds.tolist()):
+            outputfile.write(str(train_dataset.re_pc_dict[pc[m].tolist()[0]]) + ' ')
+            for j in k[0]:
                 outputfile.write('%s ' % j)
             outputfile.write('\n')
 

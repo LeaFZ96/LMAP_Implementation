@@ -20,9 +20,14 @@ class LSTM(nn.Module):
         pc_embeds = self.pc_embeddings(pc.long())
         delta_embeds = self.delta_embeddings(delta.long())
 
+        #print('pc_embeds', pc_embeds.shape)
+        #print('delta_embeds', delta_embeds.shape)
+
         embeds = pc_embeds
         if self.training:
             embeds = torch.cat([delta_embeds, embeds], 1)
+
+        #print('embeds shape', embeds.shape)
 
         output, _ = self.lstm0(embeds.view(len(embeds), 1, -1))
         output, _ = self.lstm1(output)
