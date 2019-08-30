@@ -1,4 +1,3 @@
-import numpy as np
 import matplotlib.pyplot as plt
 
 inputfile = open('data/tsne_2_stride.out')
